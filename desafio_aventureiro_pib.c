@@ -13,6 +13,7 @@ int main() {
     float area1;
     float pib1;
     int pontos1;
+    // foi adicionado análise de daods com divisão
     float Densidade_Populacional;
     float PIB_per_Capita;
 
@@ -24,20 +25,21 @@ int main() {
     float area2;
     float pib2;
     int pontos2;
+    // foi adicionado análise de daods com divisão
     float Densidade_Populacional2;
     float  PIB_per_Capita2;
 
     //Área para entrada de dados
     //ENTRADA CARTA 1 
     printf("Cadastro da Carta 1\n");
-printf("\n");
+    printf("\n");
     printf("Estado (A-H): ");
     scanf(" %c", &estado1);
 
     printf("Codigo da Carta (ex: A01): ");
     scanf("%s", codigo1);
 
-getchar(); // limpa buffer
+    getchar(); // limpa buffer
 
     printf("Nome da Cidade: ");
     fgets(cidade1, 50, stdin);
@@ -48,32 +50,32 @@ getchar(); // limpa buffer
     printf("Area (km2): ");
     scanf("%f", &area1);
 
-    printf("PIB: ");
+    printf("PIB:");
     scanf("%f", &pib1);
 
     printf("Numero de Pontos Turisticos: ");
     scanf("%d", &pontos1);
 
-
-
+//Área de cáuculo de dados por divisão entre população / area(km)
     Densidade_Populacional= (populacao1) / (area1) ;
     printf("A densidade populacional é: %.5f\n", Densidade_Populacional);
 
+// Área de cáuculo de dados por divisão entre PIB / população
      PIB_per_Capita= (pib1) / (populacao1) ;
     printf("O PIB per capita é: %.5f\n", PIB_per_Capita);
 
-printf("\n");
+    printf("\n");// para separar e deixar mais organizado para iniciar o próximo
 
     //ENTRADA CARTA 2
     printf("Cadastro da Carta 2\n");
-printf("\n");
+    printf("\n");
     printf("Estado (A-H): ");
     scanf(" %c", &estado2);
 
     printf("Codigo da Carta (ex: B02): ");
     scanf("%s", codigo2);
 
-getchar(); // limpa buffer
+    getchar(); // limpa buffer
 
     printf("Nome da Cidade: ");
     fgets(cidade2, 50, stdin);
@@ -90,19 +92,20 @@ getchar(); // limpa buffer
     printf("Numero de Pontos Turisticos: ");
     scanf("%d", &pontos2);
 
-
-
+//Área de cáuculo de dados por divisão entre população / area(km)
     Densidade_Populacional2= (populacao2) / (area2) ;
     printf("A densidade populacional é: %.5f\n", Densidade_Populacional);
 
-     PIB_per_Capita2= (populacao2) / (pib2) ;
+// Área de cáuculo de dados por divisão entre PIB / população
+     PIB_per_Capita2= (pib2) / (populacao2);
     printf("O PIB per capita é: %.5f\n", PIB_per_Capita2);
 
-getchar(); // limpa buffer
-printf("\n");
+    getchar(); // limpa buffer
+    printf("\n");// para separar e deixar mais organizado para iniciar o próximo
+
     // Área para exibição dos dados da cidade
     printf(" Cadastro das cartas\n");
-printf("\n");
+    printf("\n");
     printf("Carta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Codigo: %s", codigo1);
